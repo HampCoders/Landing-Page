@@ -763,4 +763,77 @@
     color: var(--gray-500);
     font-size: 0.875rem;
   }
- /* Responsive */
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .testimonial-card {
+      flex: 0 0 calc(50% - 0.75rem);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-nav,
+    .auth-buttons {
+      display: none;
+    }
+  
+    .mobile-menu-btn {
+      display: block;
+    }
+  
+    .hero-content {
+      flex-direction: column;
+    }
+  
+    .hero-text {
+      text-align: center;
+    }
+  
+    .hero-buttons {
+      justify-content: center;
+    }
+  
+    .hero-features {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .problems-grid,
+    .how-it-works-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .testimonial-card {
+      flex: 0 0 100%;
+    }
+  
+    .hero-features {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .section-title {
+      font-size: 1.75rem;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
