@@ -139,6 +139,10 @@
     color: var(--white);
   }
 
+
+  /* Header */
+
+  /* Hero Section */
   .hero {
     background: #043873;
     color: var(--white);
@@ -200,3 +204,13 @@
   .feature-card i {
     color: var(--primary);
   }
+
+
+  /* Problem Statement Section */
+  /* How It Works Section */
+  /* Features Section */
+  /* Testimonials Section */
+  /* About */
+  /* CTA Section */
+  /* Footer */
+ /* Responsive */
