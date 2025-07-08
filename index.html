@@ -1,450 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ElectricalConnect - Conectando hogares con técnicos eléctricos certificados</title>
-  <meta name="description" content="Plataforma que conecta a dueños de hogares urbanos con proveedores técnicos eléctricos certificados, garantizando servicios seguros y eficientes.">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectricalConnect - Conectando hogares con técnicos eléctricos certificados</title>
+    <meta name="description" content="Plataforma que conecta a dueños de hogares urbanos con proveedores técnicos eléctricos certificados, garantizando servicios seguros y eficientes.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
-  <!-- Header -->
   <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="public/img/logo.png" alt="Logo de ElectricalConnect" class="logo-img">
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#how-it-works">Cómo Funciona</a></li>
-          <li><a href="#features">Sobre Nosotros</a></li>
-          <li><a href="#testimonials">Testimonios</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+          <div class="logo">
+              <img src="./public/img/logo.png" alt="Logo de ElectricalConnect" class="logo-img">
+          </div>
 
-      <button class="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-      <ul>
-        <li><a href="#how-it-works">Cómo Funciona</a></li>
-        <li><a href="#aboutus">Características</a></li>
-        <li><a href="#testimonials">Testimonios</a></li>
-        <li><a href="#contact">Contacto</a></li>
-        <li><a href="#" class="btn btn-outline mobile-btn">Iniciar Sesión</a></li>
-        <li><a href="#" class="btn btn-primary mobile-btn">Registrarse</a></li>
-      </ul>
-    </div>
+          <nav class="main-nav">
+              <ul>
+                  <li><a href="#how-it-works" data-i18n="nav_how_it_works">Cómo Funciona</a></li>
+                  <li><a href="#features" data-i18n="nav_about_us">Sobre Nosotros</a></li>
+                  <li><a href="#video-demo" data-i18n="nav_demo">Demo</a></li>
+                  <li><a href="#testimonials" data-i18n="nav_testimonials">Testimonios</a></li>
+                  <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+                  <div class="header-buttons">
+                  <a href="#" class="btn btn-primary" id="login-btn" data-i18n="login">Iniciar Sesión</a>
+                  <a href="#" class="btn btn-secondary" id="register-btn" data-i18n="register">Registrarse</a>
+                  <button id="language-toggle" class="btn language-btn">EN</button>
+                  </div>
+              </ul>
+          </nav>
+
+
+          <button class="mobile-menu-btn" aria-label="Abrir menú">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+      </div>
+
+      <!-- Mobile Menu Mejorado -->
+      <div class="mobile-menu">
+          
+          <ul>
+              <li><a href="#how-it-works" data-i18n="nav_how_it_works">Cómo Funciona</a></li>
+              <li><a href="#features" data-i18n="nav_about_us">Sobre Nosotros</a></li>
+              <li><a href="#video-demo" data-i18n="nav_demo">Demo</a></li>
+              <li><a href="#testimonials" data-i18n="nav_testimonials">Testimonios</a></li>
+              <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+          </ul>
+      </div>
   </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-          <div class="hero-content">
-            <div class="hero-text">
-              <h1>Conectamos hogares con técnicos eléctricos certificados</h1>
-              <p>Soluciones eléctricas seguras, rápidas y confiables para tu hogar o negocio</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 data-i18n="hero_title">Conectamos hogares con técnicos eléctricos certificados</h1>
+                    <p data-i18n="hero_subtitle">Soluciones eléctricas seguras, rápidas y confiables para tu hogar o negocio</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary btn-large" data-i18n="get_started">Comenzar Ahora</a>
+                        <a href="#how-it-works" class="btn btn-outline btn-large"  data-i18n="learn_more">Saber Más</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Técnico eléctrico certificado trabajando">
+                </div>
             </div>
-            <div class="hero-image">
-              <img src="public/img/reparacion.webp" alt="Técnico eléctrico certificado trabajando">
+            <div class="hero-features">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <span data-i18n="feature_certified">Técnicos Certificados</span>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <span data-i18n="feature_fast">Respuesta Rápida</span>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-star"></i>
+                    <span data-i18n="feature_guaranteed">Servicio Garantizado</span>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span data-i18n="feature_tracking">Seguimiento en Tiempo Real</span>
+                </div>
             </div>
-          </div>
-          <div class="hero-features">
-            <div class="feature-card">
-              <i class="fas fa-shield-alt"></i>
-              <span>Técnicos Certificados</span>
-            </div>
-            <div class="feature-card">
-              <i class="fas fa-clock"></i>
-              <span>Respuesta Rápida</span>
-            </div>
-            <div class="feature-card">
-              <i class="fas fa-star"></i>
-              <span>Servicio Garantizado</span>
-            </div>
-            <div class="feature-card">
-              <i class="fas fa-check-circle"></i>
-              <span>Seguimiento en Tiempo Real</span>
-            </div>
-          </div>
         </div>
     </section>
 
     <!-- How It Works Section -->
-  <section id="how-it-works" class="how-it-works">
-    <div class="container">
-      <h2 class="section-title">Cómo funciona</h2>
-      <div class="how-it-works-grid">
-        <div class="how-it-works-column">
-          <h3 class="column-title">
-            <span class="number-circle">1</span>
-            Para propietarios
-          </h3>
-          <ol class="steps-list">
-            <li class="step">
-              <div class="step-icon">
-                <i class="fas fa-search"></i>
-              </div>
-              <div class="step-content">
-                <h4>Busca técnicos certificados</h4>
-                <p>Encuentra técnicos verificados cerca de tu ubicación</p>
-              </div>
-            </li>
-            <li class="step">
-              <div class="step-icon">
-                <i class="fas fa-star"></i>
-              </div>
-              <div class="step-content">
-                <h4>Compara perfiles y reseñas</h4>
-                <p>Revisa calificaciones y experiencia previa</p>
-              </div>
-            </li>
-            <li class="step">
-              <div class="step-icon">
-                <i class="fas fa-bolt"></i>
-              </div>
-              <div class="step-content">
-                <h4>Genera informes de energia</h4>
-                <p>Monitorea tu consumo de energia tiempo real</p>
-              </div>
-            </li>
-          </ol>
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title" data-i18n="how_it_works_title">Cómo funciona</h2>
+            <div class="how-it-works-grid">
+                <div class="how-it-works-column">
+                    <h3 class="column-title">
+                        <span class="number-circle">1</span>
+                        <span data-i18n="for_homeowners">Para propietarios</span>
+                    </h3>
+                    <ol class="steps-list">
+                        <li class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 data-i18n="step1_homeowners_title">Busca técnicos certificados</h4>
+                                <p data-i18n="step1_homeowners_desc">Encuentra técnicos verificados cerca de tu ubicación</p>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 data-i18n="step2_homeowners_title">Compara perfiles y reseñas</h4>
+                                <p data-i18n="step2_homeowners_desc">Revisa calificaciones y experiencia previa</p>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 data-i18n="step3_homeowners_title">Genera informes de energía</h4>
+                                <p data-i18n="step3_homeowners_desc">Monitorea tu consumo de energía en tiempo real</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="how-it-works-column">
+                    <h3 class="column-title">
+                        <span class="number-circle">2</span>
+                        <span data-i18n="for_providers">Para proveedores</span>
+                    </h3>
+                    <ol class="steps-list">
+                        <li class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 data-i18n="step1_providers_title">Crea tu perfil verificado</h4>
+                                <p data-i18n="step1_providers_desc">Sube tus certificaciones y experiencia</p>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 data-i18n="step2_providers_title">Recibe solicitudes de servicio</h4>
+                                <p data-i18n="step2_providers_desc">Gestiona tu agenda y disponibilidad</p>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 data-i18n="step3_providers_title">Gestiona tu inventario</h4>
+                                <p data-i18n="step3_providers_desc">Gestiona inventario para tus componentes</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </div>
-        <div class="how-it-works-column">
-          <h3 class="column-title">
-            <span class="number-circle">2</span>
-            Para proveedores
-          </h3>
-          <ol class="steps-list">
-            <li class="step">
-              <div class="step-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <div class="step-content">
-                <h4>Crea tu perfil verificado</h4>
-                <p>Sube tus certificaciones y experiencia</p>
-              </div>
-            </li>
-            <li class="step">
-              <div class="step-icon">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div class="step-content">
-                <h4>Recibe solicitudes de servicio</h4>
-                <p>Gestiona tu agenda y disponibilidad</p>
-              </div>
-            </li>
-            <li class="step">
-              <div class="step-icon">
-                <i class="fas fa-star"></i>
-              </div>
-              <div class="step-content">
-                <h4>Muestra tu trabajo</h4>
-                <p>Gestiona inventario para tus compoenentes</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+
     <!-- Problem Statement Section -->
     <section class="problem-statement">
-    <div class="container">
-      <h2 class="section-title">Resolvemos problemas reales</h2>
-      <div class="problems-grid">
-        <div class="problem-card">
-          <div class="icon-circle">
-            <i class="fas fa-search"></i>
-          </div>
-          <h3>Para propietarios</h3>
-          <p>
-            Los dueños de hogares y negocios enfrentan dificultades para encontrar proveedores confiables, generando
-            riesgos en sus instalaciones y retrasos en la solución de problemas críticos.
-          </p>
-          <ul class="check-list">
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span>Acceso a técnicos certificados y verificados</span>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span>Reducción de riesgos en instalaciones eléctricas</span>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span>Ahorro de tiempo en búsquedas extensas</span>
-            </li>
-          </ul>
+        <div class="container">
+            <h2 class="section-title" data-i18n="problems_title">Resolvemos problemas reales</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 data-i18n="problems_homeowners_title">Para propietarios</h3>
+                    <p data-i18n="problems_homeowners_desc">
+                        Los dueños de hogares y negocios enfrentan dificultades para encontrar proveedores confiables, generando
+                        riesgos en sus instalaciones y retrasos en la solución de problemas críticos.
+                    </p>
+                    <ul class="check-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="problems_homeowners_benefit1">Acceso a técnicos certificados y verificados</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="problems_homeowners_benefit2">Reducción de riesgos en instalaciones eléctricas</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="problems_homeowners_benefit3">Ahorro de tiempo en búsquedas extensas</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="problem-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 data-i18n="problems_providers_title">Para proveedores</h3>
+                    <p data-i18n="problems_providers_desc">
+                        Los proveedores de componentes eléctricos enfrentan dificultades para encontrar clientes de forma
+                        constante, lo que genera un aumento considerable de informalidad en el sector eléctrico.
+                    </p>
+                    <ul class="check-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="problems_providers_benefit1">Acceso a una red de clientes potenciales</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="problems_providers_benefit2">Herramientas profesionales de gestión</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="problems_providers_benefit3">Protección contra la competencia desleal</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="problem-card">
-          <div class="icon-circle">
-            <i class="fas fa-tools"></i>
-          </div>
-          <h3>Para proveedores</h3>
-          <p>
-            Los proveedores de componentes eléctricos enfrentan dificultades para encontrar clientes de forma
-            constante, lo que genera un aumento considerable de informalidad en el sector eléctrico.
-          </p>
-          <ul class="check-list">
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span>Acceso a una red de clientes potenciales</span>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span>Herramientas profesionales de gestión</span>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span>Protección contra la competencia desleal</span>
-            </li>
-          </ul>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section id="video-demo" class="video-demo">
+        <div class="container">
+            <div class="video-demo-content">
+                <div class="video-text">
+                    <h2 class="section-title" data-i18n="video_demo_title">Ve ElectricalConnect en Acción</h2>
+                    <p data-i18n="video_demo_subtitle">Descubre cómo nuestra plataforma conecta propietarios con técnicos certificados de manera segura y eficiente.</p>
+                    <div class="video-benefits">
+                        <div class="video-benefit">
+                            <i class="fas fa-play-circle"></i>
+                            <span data-i18n="video_benefit_1">Demostración de la plataforma</span>
+                        </div>
+                        <div class="video-benefit">
+                            <i class="fas fa-chart-line"></i>
+                            <span data-i18n="video_benefit_2">Casos de éxito reales</span>
+                        </div>
+                        <div class="video-benefit">
+                            <i class="fas fa-shield-alt"></i>
+                            <span data-i18n="video_benefit_3">Procesos de verificación</span>
+                        </div>
+                    </div>
+                    <div class="video-buttons">
+                        <a href="#" class="btn btn-primary btn-large" data-i18n="try_platform">Probar Plataforma</a>
+                        <a href="#features" class="btn btn-large" id="know-more-btn" data-i18n="learn_more">Saber Más</a>
+                    </div>
+                </div>
+                <div class="video-container-demo">
+                    <div class="video-placeholder" id="video-placeholder">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Demo Video Thumbnail">
+                            <div class="play-button" role="button" tabindex="0" aria-label="Play video">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4 data-i18n="video_title">ElectricalConnect: Conexión Segura</h4>
+                            <p data-i18n="video_duration">Duración: 3:15</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <section id="aboutus" class="aboutus">
-    <div class="container">
-      <h2 class="section-title">Nuestro Equipo</h2>
-      <h3>About the Team Video</h3>
-      <table class="team-table">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Rol</th>
-            <th>Descripción</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Matias Aliaga</td>
-            <td>Co-Fundador</td>
-            <td>Encargado del desarrollo backend.</td>
-          </tr>
-          <tr>
-            <td>Ricardo del Aguila</td>
-            <td>Co-Fundador</td>
-            <td>Experto en tecnología y desarrollo de plataformas innovadoras.</td>
-          </tr>
-          <tr>
-            <td>Italo Sanchez</td>
-            <td>Co-Fundador</td>
-            <td>Responsable de diseño y desarrollo front end.</td>
-          </tr>
-          <tr>
-            <td>Ivo Machado</td>
-            <td>Co-Fundador</td>
-            <td>Responsable de diseño y desarrollo front end.</td>
-          </tr>
-          <tr>
-            <td>Eric Olivera</td>
-            <td>Co-Fundador</td>
-            <td>Encargado del desarrollo backend y optimización de procesos internos.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    </section>
 
+    <!-- About Team Section -->
+    <section id="aboutus" class="aboutus">
+        <div class="container">
+            <h2 class="section-title" data-i18n="team_title">Nuestro Equipo</h2>
+            
+            <div class="video-container">
+                <div class="video-placeholder" id="team-video-placeholder">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Team Video">
+                        <div class="play-button team-play-btn" role="button" tabindex="0" aria-label="Play team video">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4 data-i18n="team_video_title">Conoce al Equipo de ElectricalConnect</h4>
+                        <p data-i18n="team_video_subtitle">Descubre quiénes están detrás de la innovación</p>
+                    </div>
+                </div>
+            </div>
 
-<!-- Features Section --> 
-  <section id="features" class="features">
-    <div class="container">
-      <h2 class="section-title">Conectamos personas con 
-        soluciones eléctricas seguras</h2>
-      <div class="features-grid">
-        <div class="feature-box">
-          <h3>Nuestra misión y visión</h3>
-          <div class="section">
-            <div class="icon-box">
-              <img src="public/img/multiple-users-silhouette.png" alt="Icono Misión">
-            </div>
-            <div>
-              <h2>Misión</h2>
-              <p>Nuestra misión es desarrollar una solución tecnológica innovadora que permita a las personas contactar con empresas proveedoras especializadas en electrónica, para prevenir o solucionar problemas en instalaciones eléctricas de manera efectiva, segura y legalmente correctas.</p>
-            </div>
-          </div>
-      
-          <div class="section">
-            <div class="icon-box">
-              <img src="https://img.icons8.com/ios-filled/50/combo-chart--v1.png" alt="Icono Visión">
-            </div>
-            <div>
-              <h2>Visión</h2>
-              <p>Nuestra visión es convertirnos en líderes globales en el desarrollo de tecnologías y plataformas eficientes y escalables, proporcionando herramientas que permitan conectar a los usuarios y empresas con proveedores especializados, para prevenir o solucionar instalaciones eléctricas ineficientes, transformando el entorno brindando calidad y seguridad.</p>
-            </div>
-          </div>
+            <table class="team-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="table_name">Nombre</th>
+                        <th data-i18n="table_role">Rol</th>
+                        <th data-i18n="table_description">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matias Aliaga</td>
+                        <td data-i18n="role_cofounder">Co-Fundador</td>
+                        <td data-i18n="desc_matias">Encargado del desarrollo backend.</td>
+                    </tr>
+                    <tr>
+                        <td>Ricardo del Aguila</td>
+                        <td data-i18n="role_cofounder">Co-Fundador</td>
+                        <td data-i18n="desc_ricardo">Experto en tecnología y desarrollo de plataformas innovadoras.</td>
+                    </tr>
+                    <tr>
+                        <td>Italo Sanchez</td>
+                        <td data-i18n="role_cofounder">Co-Fundador</td>
+                        <td data-i18n="desc_italo">Responsable de diseño y desarrollo front end.</td>
+                    </tr>
+                    <tr>
+                        <td>Ivo Machado</td>
+                        <td data-i18n="role_cofounder">Co-Fundador</td>
+                        <td data-i18n="desc_ivo">Responsable de diseño y desarrollo front end.</td>
+                    </tr>
+                    <tr>
+                        <td>Eric Olivera</td>
+                        <td data-i18n="role_cofounder">Co-Fundador</td>
+                        <td data-i18n="desc_eric">Encargado del desarrollo backend y optimización de procesos internos.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="feature-box">
-          <h3>Nuestros valores</h3>
-          
-          <ul class="check-list">
-            <li>
-              <i class="fas fa-star"></i>
-              <span>Seguridad ante todo: Garantizamos servicios confiables que cumplan con las normas legales y técnicas.</span>
-            </li>
-            <li>
-              <i class="fas fa-star"></i>
-              <span>Conexión real: Acortamos la distancia entre proveedores calificados y quienes más los necesitan.</span>
-            </li>
-            <li>
-              <i class="fas fa-star"></i>
-              <span>Confianza mutua: Fomentamos relaciones transparentes y duraderas entre clientes y proveedores.</span>
-            </li>
-            <li>
-              <i class="fas fa-star"></i>
-              <span>Calidad garantizada: Trabajamos con proveedores comprometidos con altos estándares de servicio.</span>
-            </li>
-            <li>
-               <i class="fas fa-star"></i>
-               <span>Asesoría accesible: Ofrecemos orientación clara para que todos tomen decisiones informadas.</span>
-            </li>
-            <li>
-               <i class="fas fa-star"></i>
-               <span>Compromiso social: Buscamos mejorar los entornos donde vivimos y trabajamos, de forma ética y responsable.</span>
-            </li>
-          </ul>
-      </div>
-    </div>
-  </section>
-     <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials">
-    <div class="container">
-      <h2 class="section-title">Lo que dicen nuestros usuarios</h2>
-      <div class="testimonials-slider">
-        <div class="testimonials-container">
-          <div class="testimonial-card">
-            <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <span>MR</span>
-              </div>
-              <div class="testimonial-author">
-                <p class="author-name">María Rodríguez</p>
-                <p class="author-type">Propietaria de hogar</p>
-              </div>
-            </div>
-            <p class="testimonial-text">
-              "Encontré un técnico certificado en menos de una hora. El servicio fue excelente y me dio mucha
-              tranquilidad saber que estaba trabajando con un profesional verificado."
-            </p>
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <span>JL</span>
-              </div>
-              <div class="testimonial-author">
-                <p class="author-name">Juan López</p>
-                <p class="author-type">Dueño de PYME</p>
-              </div>
-            </div>
-            <p class="testimonial-text">
-              "La plataforma me ayudó a resolver un problema eléctrico urgente en mi negocio. El técnico llegó
-              rápidamente y solucionó el problema sin complicaciones."
-            </p>
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star empty"></i>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <span>CP</span>
-              </div>
-              <div class="testimonial-author">
-                <p class="author-name">Carlos Pérez</p>
-                <p class="author-type">Técnico eléctrico</p>
-              </div>
-            </div>
-            <p class="testimonial-text">
-              "Desde que me uní a la plataforma, mi negocio ha crecido considerablemente. Las herramientas de gestión
-              me ayudan a organizar mi trabajo y atender mejor a mis clientes."
-            </p>
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>  
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer --> 
-  <footer id="contact" class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-column">
-          <div class="footer-logo">
-            <i class="fas fa-bolt"></i>
-            <span>ElectricalConnect</span>
-          </div>
-          <p>Conectando hogares y negocios con técnicos eléctricos certificados.</p>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title" data-i18n="features_title">Conectamos personas con soluciones eléctricas seguras</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3 data-i18n="mission_vision_title">Nuestra misión y visión</h3>
+                    
+                    <div class="section">
+                        <div class="icon-box">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234F9CF9'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/></svg>" alt="Icono Misión">
+                        </div>
+                        <div>
+                            <h2 data-i18n="mission_title">Misión</h2>
+                            <p data-i18n="mission_desc">Nuestra misión es desarrollar una solución tecnológica innovadora que permita a las personas contactar con empresas proveedoras especializadas en electrónica, para prevenir o solucionar problemas en instalaciones eléctricas de manera efectiva, segura y legalmente correctas.</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="icon-box">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234F9CF9'><path d='M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z'/></svg>" alt="Icono Visión">
+                        </div>
+                        <div>
+                            <h2 data-i18n="vision_title">Visión</h2>
+                            <p data-i18n="vision_desc">Nuestra visión es convertirnos en líderes globales en el desarrollo de tecnologías y plataformas eficientes y escalables, proporcionando herramientas que permitan conectar a los usuarios y empresas con proveedores especializados, para prevenir o solucionar instalaciones eléctricas ineficientes, transformando el entorno brindando calidad y seguridad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <h3 data-i18n="values_title">Nuestros valores</h3>
+                    <ul class="check-list">
+                        <li>
+                            <i class="fas fa-star"></i>
+                            <span data-i18n="value1">Seguridad ante todo: Garantizamos servicios confiables que cumplan con las normas legales y técnicas.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-star"></i>
+                            <span data-i18n="value2">Conexión real: Acortamos la distancia entre proveedores calificados y quienes más los necesitan.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-star"></i>
+                            <span data-i18n="value3">Confianza mutua: Fomentamos relaciones transparentes y duraderas entre clientes y proveedores.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-star"></i>
+                            <span data-i18n="value4">Calidad garantizada: Trabajamos con proveedores comprometidos con altos estándares de servicio.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-star"></i>
+                            <span data-i18n="value5">Asesoría accesible: Ofrecemos orientación clara para que todos tomen decisiones informadas.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-star"></i>
+                            <span data-i18n="value6">Compromiso social: Buscamos mejorar los entornos donde vivimos y trabajamos, de forma ética y responsable.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="footer-column">
-          <h3>Empresa</h3>
-          <ul class="footer-links">
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li><a href="#">Equipo</a></li>
-            <li><a href="#">Carreras</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-i18n="testimonials_title">Lo que dicen nuestros usuarios</h2>
+            <div class="testimonials-slider">
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <span>MR</span>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">María Rodríguez</p>
+                                <p class="author-type" data-i18n="homeowner_type">Propietaria de hogar</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonial1">
+                            "Encontré un técnico certificado en menos de una hora. El servicio fue excelente y me dio mucha
+                            tranquilidad saber que estaba trabajando con un profesional verificado."
+                        </p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <span>JL</span>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Juan López</p>
+                                <p class="author-type" data-i18n="business_type">Dueño de PYME</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonial2">
+                            "La plataforma me ayudó a resolver un problema eléctrico urgente en mi negocio. El técnico llegó
+                            rápidamente y solucionó el problema sin complicaciones."
+                        </p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star empty"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <span>CP</span>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Carlos Pérez</p>
+                                <p class="author-type" data-i18n="technician_type">Técnico eléctrico</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonial3">
+                            "Desde que me uní a la plataforma, mi negocio ha crecido considerablemente. Las herramientas de gestión
+                            me ayudan a organizar mi trabajo y atender mejor a mis clientes."
+                        </p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-column">
-          <h3>Recursos</h3>
-          <ul class="footer-links">
-            <li><a href="#">Guías</a></li>
-            <li><a href="#">Certificaciones</a></li>
-            <li><a href="#">Preguntas Frecuentes</a></li>
-            <li><a href="#">Soporte</a></li>
-          </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span data-i18n="brand_name">ElectricalConnect</span>
+                    </div>
+                    <p data-i18n="footer_desc">Conectando hogares y negocios con técnicos eléctricos certificados.</p>
+                </div>
+                <div class="footer-column">
+                    <h3 data-i18n="company_title">Empresa</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features" data-i18n="about_us">Sobre Nosotros</a></li>
+                        <li><a href="#aboutus" data-i18n="team">Equipo</a></li>
+                        <li><a href="#" data-i18n="careers">Carreras</a></li>
+                        <li><a href="#" data-i18n="blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-i18n="resources_title">Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="guides">Guías</a></li>
+                        <li><a href="#" data-i18n="certifications">Certificaciones</a></li>
+                        <li><a href="#" data-i18n="faq">Preguntas Frecuentes</a></li>
+                        <li><a href="#" data-i18n="support">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-i18n="contact_title">Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@electricalconnect.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+51 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-i18n="address">Calle Principal Los Patriotas, San Miguel</span>
+                        </li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> <span data-i18n="brand_name">ElectricalConnect</span>. <span data-i18n="rights_reserved">Todos los derechos reservados.</span></p>
+            </div>
         </div>
-        <div class="footer-column">
-          <h3>Contacto</h3>
-          <ul class="contact-info">
-            <li>info@electrolink.com</li>
-            <li>+51 (555) 123-4567</li>
-            <li>Calle Principal Los Patriotas, San Migeul</li>
-          </ul>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 ElectroLink. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-
-  <script src="script.js"></script>
-
+    <script src="./i18n.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
