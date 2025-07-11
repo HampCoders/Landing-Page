@@ -107,6 +107,8 @@ const translations = {
         'testimonial2': 'La plataforma me ayudó a resolver un problema eléctrico urgente en mi negocio. El técnico llegó rápidamente y solucionó el problema sin complicaciones.',
         'testimonial3': 'Desde que me uní a la plataforma, mi negocio ha crecido considerablemente. Las herramientas de gestión me ayudan a organizar mi trabajo y atender mejor a mis clientes.',
 
+        
+        "cta_crear_cuenta": "Comienza Ahora Now",
         // Footer
         'footer_desc': 'Conectando hogares y negocios con técnicos eléctricos certificados.',
         'company_title': 'Empresa',
@@ -131,7 +133,7 @@ const translations = {
         'nav_demo': 'Demo',
         'nav_testimonials': 'Testimonials',
         'nav_contact': 'Contact',
-        'login': 'Login',
+        'login': 'Sign In',
         'register': 'Sign Up',
 
         // Hero Section
@@ -229,6 +231,7 @@ const translations = {
         'testimonial1': 'I found a certified technician in less than an hour. The service was excellent and it gave me great peace of mind knowing I was working with a verified professional.',
         'testimonial2': 'The platform helped me solve an urgent electrical problem in my business. The technician arrived quickly and solved the problem without complications.',
         'testimonial3': 'Since I joined the platform, my business has grown considerably. The management tools help me organize my work and better serve my clients.',
+         "cta_crear_cuenta": "Get Started Now",
 
         // Footer
         'footer_desc': 'Connecting homes and businesses with certified electrical technicians.',

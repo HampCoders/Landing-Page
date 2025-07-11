@@ -26,8 +26,8 @@
                     <li><a href="#testimonials" data-i18n="nav_testimonials">Testimonios</a></li>
                     <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
                     <div class="header-buttons">
-                        <a href="#" class="btn btn-primary" id="login-btn" data-i18n="login">Iniciar Sesión</a>
-                        <a href="#" class="btn btn-secondary" id="register-btn" data-i18n="register">Registrarse</a>
+                        <a href="http://localhost:5173/sign-in" class="btn btn-primary" id="login-btn" data-i18n="login" target="_blank">Iniciar Sesión</a>
+                        <a href="http://localhost:5173/sign-up" class="btn btn-secondary" id="register-btn" data-i18n="register" target="_blank">Registrarse</a>
                         <button id="language-toggle" class="btn language-btn">EN</button>
                     </div>
                 </ul>
@@ -63,7 +63,7 @@
                     <p data-i18n="hero_subtitle">Soluciones eléctricas seguras, rápidas y confiables para tu hogar o
                         negocio</p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary btn-large" data-i18n="get_started">Comenzar Ahora</a>
+                        <a href="#" class="btn btn-primary btn-large" data-i18n="get_started" target="_blank">Comenzar Ahora</a>
                         <a href="#how-it-works" class="btn btn-outline btn-large" data-i18n="learn_more">Saber Más</a>
                     </div>
                 </div>
@@ -265,12 +265,16 @@
     
         <div class="solution-carousel-wrapper">
             <div class="solution-carousel-track">
-                <div class="solution-slide"><img src="public/img/mapa.jpeg" alt="Mapa"></div>
-                <div class="solution-slide"><img src="public/img/request.jpeg" alt="Request"></div>
-                <div class="solution-slide"><img src="public/img/inventario.jpeg" alt="Inventario"></div>
-                <div class="solution-slide"><img src="public/img/listacomp.jpeg" alt="Lista Componentes"></div>
-                <div class="solution-slide"><img src="public/img/tipo.jpeg" alt="Tipo Servicio"></div>
-                <div class="solution-slide"><img src="public/img/horarios.jpeg" alt="Horarios"></div>
+                <div class="solution-slide"><img src="public/img/register.png" alt="Lista Componentes"></div>
+                <div class="solution-slide"><img src="public/img/login.png" alt="Tipo Servicio"></div>
+                <div class="solution-slide"><img src="public/img/properties.png" alt="Horarios"></div>
+                <div class="solution-slide"><img src="public/img/image.png" alt="Analitica"></div>
+                <div class="solution-slide"><img src="public/img/dashboard.png" alt="Mapa"></div>
+                <div class="solution-slide"><img src="public/img/image.png" alt="Request"></div>
+                <div class="solution-slide"><img src="public/img/inventori.png" alt="Inventario"></div>
+                <div class="solution-slide"><img src="public/img/schedules.png" alt="Analytics"></div>
+                <div class="solution-slide"><img src="public/img/servicereq.png" alt="Analytics"></div>
+        
             </div>
         </div>
     </section>
@@ -306,7 +310,7 @@
                 <div class="video-container-demo">
                     <div class="video-placeholder" id="video-placeholder">
                         <div class="video-thumbnail">
-                            <iframe src="https://www.youtube.com/embed/3_VQ7P-V9v0" frameborder="0" allowfullscreen
+                            <iframe src="https://www.youtube.com/embed/Jgh28eiyuOY" frameborder="0" allowfullscreen
                                 class="video-iframe">
                             </iframe>
                             <div class="video-info">
@@ -326,7 +330,7 @@
             <div class="video-container">
                 <div class="video-placeholder" id="team-video-placeholder">
                     <div class="video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/dhwZBx9cvtc" frameborder="0" allowfullscreen
+                        <iframe src="https://www.youtube.com/embed/WYFS6myXwj4" frameborder="0" allowfullscreen
                             class="video-iframe"></iframe>
                     </div>
                     <div class="video-info">
@@ -346,27 +350,27 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Matias Aliaga</td>
+                        <td>Matias Aliaga Aguirre</td>
                         <td data-i18n="role_cofounder">Co-Fundador</td>
-                        <td data-i18n="desc_matias">Encargado del desarrollo backend.</td>
+                        <td data-i18n="desc_matias">Encargado del desarrollo backend y desarrollo frontend.</td>
                     </tr>
                     <tr>
-                        <td>Ricardo del Aguila</td>
+                        <td>Ricardo del Aguila Ayala</td>
                         <td data-i18n="role_cofounder">Co-Fundador</td>
                         <td data-i18n="desc_ricardo">Experto en tecnología y desarrollo de plataformas innovadoras.</td>
                     </tr>
                     <tr>
-                        <td>Italo Sanchez</td>
+                        <td>Italo Sanchez Manrique</td>
                         <td data-i18n="role_cofounder">Co-Fundador</td>
                         <td data-i18n="desc_italo">Responsable de diseño y desarrollo front end.</td>
                     </tr>
                     <tr>
-                        <td>Ivo Machado</td>
+                        <td>Ivo Machado Bracamonte</td>
                         <td data-i18n="role_cofounder">Co-Fundador</td>
                         <td data-i18n="desc_ivo">Responsable de diseño y desarrollo front end.</td>
                     </tr>
                     <tr>
-                        <td>Leandro Contreras</td>
+                        <td>Eric Marlon Olivera Barzola</td>
                         <td data-i18n="role_cofounder">Co-Fundador</td>
                         <td data-i18n="desc_eric">Encargado del desarrollo backend y optimización de procesos internos.
                         </td>
@@ -598,7 +602,10 @@
     <button id="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
-
+    <a href="http://localhost:5173/sign-up" id="cta-btn" class="btn btn-primary cta-floating" data-i18n="cta_crear_cuenta" target="_blank">
+        <i class="fas fa-user-plus"></i>
+        <span>Comienza Ahora Gratis</span>
+    </a>
     <script src="./i18n.js"></script>
     <script src="./script.js"></script>
 </body>

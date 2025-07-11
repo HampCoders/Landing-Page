@@ -344,4 +344,23 @@ document.addEventListener('DOMContentLoaded', function () {
             track.appendChild(clone);
         });
     }
+
+    (function () {
+    const cta = document.getElementById('cta-btn');
+    let lastScroll = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
+        if (currentScroll > lastScroll && currentScroll > 300) {
+        // bajando
+        cta.style.transform = 'translateY(100px)';
+        cta.style.opacity = '0';
+        } else {
+        // subiendo
+        cta.style.transform = 'translateY(0)';
+        cta.style.opacity = '1';
+        }
+        lastScroll = currentScroll;
+    });
+    })();
 });
